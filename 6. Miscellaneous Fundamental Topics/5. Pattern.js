@@ -1,3 +1,16 @@
+// Given a pattern below print same pattern 
+
+/*
+
+for n = 4 Print this type of pattern
+
+       1 
+     1 2 1 
+   1 2 3 2 1 
+ 1 2 3 4 3 2 1 
+
+*/
+
 function pattern(n){
     for(let row = 1; row <= n; row++){
         let str = " ";
@@ -7,16 +20,13 @@ function pattern(n){
         for(let num = 1; num <= row; num++){
             str +=  `${num} `
         }
-        console.log(str);
-    }
-    
-    for(let row = 1; row <= n - 1; row++){
-        let str = " ";
-        for(let num = row - 1; num <= row - 1; num++){
-            str += `${num} `
+        let newNum = row - 1;
+        for(let num = 1; num <= row - 1; num++){
+            str += `${newNum} `
+            newNum--;
         }
         console.log(str);
     }
 }
 
-pattern(4);
+pattern(7);
