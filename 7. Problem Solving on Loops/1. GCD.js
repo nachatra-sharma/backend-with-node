@@ -1,12 +1,11 @@
-function checkGCD(a,b){
+function gcd(a, b) {
     let result = 0;
-    let checkingNum = (a < b) ? a : b;
-    for(let i = 2; i < checkingNum; i++){
+    for(let i = 2; i <= Math.min(a,b); i++){
         if(a % i == 0 && b % i == 0){
             result = i;
         }
     }
-    console.log(result);
+    return result;
 }
 
-checkGCD(24,28);
+console.log(gcd(24, 28));
